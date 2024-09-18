@@ -1,0 +1,17 @@
+docker-compose up -d
+ufw allow 5601
+ufw allow 5044
+ufw allow 9200
+ufw allow 9300
+ufw allow 9092
+ufw allow 29092
+# "`-._,-'"`-._,-'"`-._,-'"`-._,-'"`-._,-'"`-._,-'"`-._,-'"`-._,-'"`-._,-
+# Test Commands for the topicname 'decompile-log':
+# ---------------------------------------
+# docker exec -it kafka-cntr bash /bin/kafka-topics --list --bootstrap-server localhost:9092
+# docker exec -it kafka-cntr bash /bin/kafka-console-consumer --topic decompile-log --from-beginning --bootstrap-server localhost:9092
+# docker exec -it kafka-cntr bash /bin/kafka-console-producer --topic decompile-log --bootstrap-server localhost:9092
+# Notes
+# -----
+# Data will communicate in the direction of kafka-->logstash-->Elasticsearch-->kibana
+# "`-._,-'"`-._,-'"`-._,-'"`-._,-'"`-._,-'"`-._,-'"`-._,-'"`-._,-'"`-._,-._,-'"`-._,-

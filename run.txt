@@ -1,0 +1,3 @@
+find /root/decompile/apk/ -type f -size 0 -delete
+docker build -t metaleak-apk-decompile:1.0.0 .
+docker run -d -v /root/decompile:/root/decompile metaleak-apk-decompile:1.0.0
