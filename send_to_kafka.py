@@ -9,7 +9,7 @@ def send_kafka_message(broker, topic, message):
     producer.send(topic, message.encode('utf-8'))
     producer.flush()  # Ensure all messages are sent
 
-    print(f"Sent message to Kafka topic '{topic}': {message}")
+    print(f"Sent messages to Kafka topic '{topic}': {message}")
 
 if __name__ == "__main__":
     # Accept arguments for broker, topic, and message from command line
